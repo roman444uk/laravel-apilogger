@@ -19,13 +19,13 @@ the ServiceProvider. If you use a lower version of Laravel you must register it 
 _app.php_ file:
 
 ```bash
-AWT\Providers\ApiLogServiceProvider::class
+RMN\Providers\ApiLogServiceProvider::class
 ```
 
 2. Publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag=config --provider="AWT\Providers\ApiLogServiceProvider"
+php artisan vendor:publish --tag=config --provider="RMN\Providers\ApiLogServiceProvider"
 ```
 
 The config file is called *apilogs.php*. Currently supported drivers are *db* and *file*

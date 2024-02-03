@@ -1,6 +1,6 @@
 <?php
 
-namespace AWT\Http\Exceptions;
+namespace RMN\Http\Exceptions;
 
 use Exception;
 use Throwable;

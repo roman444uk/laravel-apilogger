@@ -1,8 +1,8 @@
 <?php
 
-namespace AWT\Http\Middleware;
+namespace RMN\Http\Middleware;
 
-use AWT\Contracts\ApiLoggerInterface;
+use RMN\Contracts\ApiLoggerInterface;
 use Closure;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;

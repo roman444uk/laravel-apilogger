@@ -1,13 +1,13 @@
 <?php
 
-namespace AWT\Providers;
+namespace RMN\Providers;
 
-use AWT\Console\Commands\ClearApiLogger;
-use AWT\Http\Exceptions\InvalidApiLogDriverException;
-use AWT\Http\Middleware\ApiLogger;
-use AWT\Contracts\ApiLoggerInterface;
-use AWT\DBLogger;
-use AWT\FileLogger;
+use RMN\Console\Commands\ClearApiLogger;
+use RMN\Http\Exceptions\InvalidApiLogDriverException;
+use RMN\Http\Middleware\ApiLogger;
+use RMN\Contracts\ApiLoggerInterface;
+use RMN\DBLogger;
+use RMN\FileLogger;
 use Exception;
 use Illuminate\Support\ServiceProvider;
 

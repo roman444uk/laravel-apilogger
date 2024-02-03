@@ -1,6 +1,6 @@
 <?php
 
-namespace AWT;
+namespace RMN;
 
 use Illuminate\Database\Eloquent\Model;
 

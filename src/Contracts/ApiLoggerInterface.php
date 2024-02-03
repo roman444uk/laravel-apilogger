@@ -1,6 +1,6 @@
 <?php
 
-namespace AWT\Contracts;
+namespace RMN\Contracts;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
