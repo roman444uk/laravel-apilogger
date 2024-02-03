@@ -13,15 +13,24 @@ class UpdateApiLogsTable extends Migration
      */
     public function up()
     {
-        Schema::table('api_logs', function(Blueprint $table) {
-            $table->renameColumn('response', 'status_code');
-        });
-        Schema::table('api_logs', function(Blueprint $table) {
-            $table->integer('status_code')->change();
-            $table->longText('payload_raw')->nullable()->after('payload');
-            $table->longText('response')->after('payload_raw');
-            $table->longText('response_headers')->after('response');
-            $table->text('headers')->nullable()->after('response');
+        Schema::dropIfExists('api_logs');
+
+        Schema::create('api_logs', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('method');
+            $table->string('url');
+            $table->longText('payload');
+            $table->longText('payload_raw')->nullable();
+            $table->longText('response');
+            $table->text('headers');
+            $table->longText('response_headers');
+            $table->integer('status_code');
+            $table->string('duration');
+            $table->string('controller');
+            $table->string('action');
+            $table->string('models');
+            $table->string('ip');
+            $table->timestamps();
         });
     }
 
@@ -32,19 +41,6 @@ class UpdateApiLogsTable extends Migration
      */
     public function down()
     {
-        Schema::table('api_logs', function(Blueprint $table) {
-            $table->dropColumn('response');
-            $table->dropColumn('response_headers');
-            $table->dropColumn('payload_raw');
-            $table->dropColumn('headers');
-        });
-
-        Schema::table('api_logs', function(Blueprint $table) {
-            $table->renameColumn('status_code', 'response');
-        });
-
-        Schema::table('api_logs', function(Blueprint $table) {
-            $table->longText('response')->change();
-        });
+        Schema::dropIfExists('api_logs');
     }
 }
