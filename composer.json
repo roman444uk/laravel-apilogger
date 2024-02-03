@@ -8,7 +8,7 @@
             "roman444uk\\": "src/"
         }
     },
-    "name": "roman444uk/apilogger",
+    "name": "roman444uk/laravel-apilogger",
     "description": "Small laravel package for viewing api logs which can be used in debugging.",
     "type": "library",
     "license": "MIT",
