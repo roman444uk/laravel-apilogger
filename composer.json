@@ -5,7 +5,7 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelApilogger\\": "src/"
+            "RMN\\": "src/"
         }
     },
     "name": "roman444uk/laravel-apilogger",
@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelApilogger\\Providers\\ApiLogServiceProvider"
+                "RMN\\Providers\\ApiLogServiceProvider"
             ]
         }
     },
